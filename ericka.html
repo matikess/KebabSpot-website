@@ -1,0 +1,247 @@
+
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KEBAB Spot Košice | Najlepší kebab v meste</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --fiery-orange: #FF4D00;
+            --deep-red: #B91C1C;
+            --gold: #FFB800;
+            --charcoal: #121212;
+        }
+
+        body {
+            background-color: var(--charcoal);
+            color: #ffffff;
+            font-family: 'Montserrat', sans-serif;
+            background-image: url('https://www.transparenttextures.com/patterns/dark-matter.png'); /* Gritty overlay */
+        }
+
+        h1, h2, h3 {
+            font-family: 'Bebas Neue', cursive;
+            letter-spacing: 2px;
+        }
+
+        .hero-bg {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                        url('https://images.unsplash.com/photo-1561651823-34feb02250e4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .btn-primary {
+            background-color: var(--fiery-orange);
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            font-family: 'Bebas Neue';
+            font-size: 1.5rem;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--gold);
+            transform: scale(1.05);
+            color: black;
+        }
+
+        .menu-card {
+            background: #1a1a1a;
+            border-bottom: 4px solid var(--fiery-orange);
+            transition: transform 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .menu-card:hover {
+            transform: translateY(-5px);
+            border-bottom: 4px solid var(--gold);
+        }
+
+        .text-gradient {
+            background: linear-gradient(to right, var(--fiery-orange), var(--gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .review-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-left: 2px solid var(--gold);
+        }
+
+        .rating-badge {
+            background: var(--gold);
+            color: black;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-black/80 backdrop-blur-md border-b border-white/10 py-4 px-6 flex justify-between items-center">
+        <div class="text-3xl font-bold tracking-tighter">KEBAB<span class="text-[#FF4D00]">SPOT</span></div>
+        <div class="hidden md:flex space-x-8 font-bold uppercase text-sm">
+            <a href="#menu" class="hover:text-[#FF4D00]">Menu</a>
+            <a href="#o-nas" class="hover:text-[#FF4D00]">O nás</a>
+            <a href="#recenzie" class="hover:text-[#FF4D00]">Recenzie</a>
+            <a href="#kontakt" class="hover:text-[#FF4D00]">Kontakt</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-bg h-screen flex flex-col justify-center items-center text-center px-4">
+        <div class="rating-badge mb-4 animate-bounce">⭐ 4.9 (38+ recenzií)</div>
+        <h1 class="text-7xl md:text-9xl mb-2 italic">NAJLEPŠÍ KEBAB <span class="text-gradient">V MESTE </span></h1>
+        <p class="text-xl md:text-2xl mb-8 max-w-2xl font-light">Poctivé mäso, čerstvá zelenina a domáce dresingy priamo v srdci Košíc.</p>
+        <a href="#menu" class="btn-primary px-10 py-3 rounded-sm">Pozri menu</a>
+    </header>
+
+    <!-- About Section -->
+    <section id="o-nas" class="py-20 px-6 max-w-5xl mx-auto text-center">
+        <h2 class="text-5xl mb-6">Poctivý Street Food</h2>
+        <p class="text-gray-400 leading-relaxed text-lg">
+            V Kebab Spot si zakladáme na kvalite, ktorú pocítite v každom súste. Naše mäso je vždy šťavnaté a dobre ochutené, zelenina prichádza čerstvá každé ráno a porcie sú také veľké, že budete mať problém ich dojesť. Či už idete na rýchly obed alebo neskorú večeru, u nás nájdete tú pravú chuť Orientu.
+        </p>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="py-20 bg-black/30 px-6">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-5xl mb-12 text-center">Naša <span class="text-[#FF4D00]">Ponuka</span></h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Menu Item 1 -->
+                <div class="menu-card p-6">
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="text-4xl">🌮</span>
+                        <span class="text-xl font-bold text-[#FFB800]">6,20 €</span>
+                    </div>
+                    <h3 class="text-2xl mb-2">Pide Kebab</h3>
+                    <p class="text-gray-400 text-sm">Turecký chlieb, kuracie mäso, fresh zelenina, dresing na výber.</p>
+                </div>
+
+                <!-- Menu Item 2 -->
+                <div class="menu-card p-6">
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="text-4xl">🌯</span>
+                        <span class="text-xl font-bold text-[#FFB800]">6,20 €</span>
+                    </div>
+                    <h3 class="text-2xl mb-2">Dürüm Kebab</h3>
+                    <p class="text-gray-400 text-sm">Tortilla, kuracie mäso, fresh zelenina, dresing na výber.</p>
+                </div>
+
+                <!-- Menu Item 3 -->
+                <div class="menu-card p-6">
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="text-4xl">🍱</span>
+                        <span class="text-xl font-bold text-[#FFB800]">7,40 €</span>
+                    </div>
+                    <h3 class="text-2xl mb-2">Kebab Tanier</h3>
+                    <p class="text-gray-400 text-sm">Kuracie mäso, ryža/hranolky, fresh zelenina, dresing.</p>
+                </div>
+
+                <!-- Menu Item 4 -->
+                <div class="menu-card p-6">
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="text-4xl">📦</span>
+                        <span class="text-xl font-bold text-[#FFB800]">6,40 €</span>
+                    </div>
+                    <h3 class="text-2xl mb-2">Kebab Box</h3>
+                    <p class="text-gray-400 text-sm">Kuracie mäso, ryža/hranolky, fresh zelenina, dresing.</p>
+                </div>
+
+                <!-- Menu Item 5 -->
+                <div class="menu-card p-6">
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="text-4xl">🥙</span>
+                        <span class="text-xl font-bold text-[#FFB800]">7,20 €</span>
+                    </div>
+                    <h3 class="text-2xl mb-2">Falafel Tanier</h3>
+                    <p class="text-gray-400 text-sm">Falafel, ryža/hranolky, fresh zelenina, dresing na výber.</p>
+                </div>
+
+                <!-- Menu Item 6 -->
+                <div class="menu-card p-6">
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="text-4xl">🍔</span>
+                        <span class="text-xl font-bold text-[#FFB800]">8,90 €</span>
+                    </div>
+                    <h3 class="text-2xl mb-2">Smash Burger</h3>
+                    <p class="text-gray-400 text-sm">Brioška, hovädzie mäso, slanina, cheddar, nakladaná zelenina.</p>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center">
+                <p class="text-gray-500 italic">Kompletné menu a špeciálne ponuky nájdete priamo u nás.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="recenzie" class="py-20 px-6">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-5xl mb-12">Čo hovoria <span class="text-[#FFB800]">zákazníci</span></h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Review 1 -->
+                <div class="review-card p-6">
+                    <div class="text-[#FFB800] mb-2">⭐⭐⭐⭐⭐</div>
+                    <p class="italic mb-4 text-gray-300">"Nový podnik KebabSpot ma veľmi milo prekvapil. Kebab bol šťavnatý, mäso dobre ochutené a zelenina čerstvá. Porcia bola poctivá a pomer cena/kvalita je veľmi dobrý."</p>
+                    <p class="font-bold">— Mario Bunda</p>
+                </div>
+                <!-- Review 2 -->
+                <div class="review-card p-6">
+                    <div class="text-[#FFB800] mb-2">⭐⭐⭐⭐⭐</div>
+                    <p class="italic mb-4 text-gray-300">"Ak hľadáte fakt poctivý kebab, toto je ono! Úprimne, už dávno som nejedla niečo tak dobré. Mäso bolo neskutočne šťavnaté a tie brutálne porcie."</p>
+                    <p class="font-bold">— Alexandra Stefánová</p>
+                </div>
+                <!-- Review 3 -->
+                <div class="review-card p-6">
+                    <div class="text-[#FFB800] mb-2">⭐⭐⭐⭐⭐</div>
+                    <p class="italic mb-4 text-gray-300">"Najlepší kebab v Košiciach! Obrovské porcie a príjemné ceny, milá obsluha a zadarmo ovocie po jedle pri pokladni. 😋"</p>
+                    <p class="font-bold">— Piotr Chaplinski</p>
+                </div>
+                <!-- Review 4 -->
+                <div class="review-card p-6">
+                    <div class="text-[#FFB800] mb-2">⭐⭐⭐⭐⭐</div>
+                    <p class="italic mb-4 text-gray-300">"Mäso šťavnaté, čerstvá zelenina, super omáčky a porcia ktorú je problém dojesť. Mali sme kebab tanier ale bol to skôr TANIERISKO 🤣"</p>
+                    <p class="font-bold">— Veronika Stehnáč</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Hours Section -->
+    <section id="kontakt" class="py-20 bg-black/50 px-6 border-t border-white/5">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div>
+                <h2 class="text-5xl mb-8">Nájdeš nás <span class="text-[#FF4D00]">tu</span></h2>
+                <div class="space-y-4 text-lg">
+                    <p><strong class="text-white">Adresa:</strong><br>Boženy Němcovej 27/30, 040 01 Košice</p>
+                    <p><strong class="text-white">Otváracie hodiny:</strong><br>Pondelok – Nedeľa: 10:00 – 23:00</p>
+                    <p><strong class="text-white">Kontakt:</strong><br>+421 948 535 235</p>
+                    <div class="flex space-x-4 mt-6">
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="h-80 rounded-lg overflow-hidden border-2 border-white/10">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2631.9540292534825!2d21.242273!3d48.734685!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473ee16a1b637505%3A0xc0f1b21237e19662!2zQm_FvmVueSBOxJttY292ZWogMjcsIDA0MCAwMSBLb8WhaWNlLCBTbG92YWtpYQ!5e0!3m2!1sen!2ssk!4v1715000000000!5m2!1sen!2ssk" 
+                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-10 text-center border-t border-white/5 opacity-50 text-sm">
+        <p>&copy; 2024 KEBAB SPOT KOŠICE. Všetky práva vyhradené.</p>
+        <p class="mt-2 tracking-widest uppercase">Jedz. Označ. Zdieľaj.</p>
+    </footer>
+
+</body>
+</html>
